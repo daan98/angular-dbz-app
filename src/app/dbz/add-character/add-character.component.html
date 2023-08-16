@@ -1,0 +1,47 @@
+<h3>{{characterToUpdate.id ? 'Update Character' : 'Add Character'}}</h3>
+<hr>
+
+<form
+    (ngSubmit)="characterToUpdate.name ? onUpdateCharacter(characterToUpdate) : onAddCharacter()"
+    class="row w-100 m-auto"
+>
+    <!-- Handle new character information change -->
+    <input
+        type="text"
+        placeholder="Name"
+        name="name"
+        class="form-control mb-2"
+        *ngIf="!characterToUpdate.id"
+        [(ngModel)]="newCharacterInfo.name"
+    />
+
+    <input
+        type="number"
+        placeholder="Power"
+        name="power"
+        class="form-control mb-2"
+        *ngIf="!characterToUpdate.id"
+        [(ngModel)]="newCharacterInfo.power"
+    />
+
+    <!-- Handle character to update information change -->
+    <input
+        type="text"
+        placeholder="Name"
+        name="name"
+        class="form-control mb-2"
+        *ngIf="characterToUpdate.id"
+        [(ngModel)]="characterToUpdate.name"
+    />
+
+    <input
+        type="number"
+        placeholder="Power"
+        name="power"
+        class="form-control mb-2"
+        *ngIf="characterToUpdate.id"
+        [(ngModel)]="characterToUpdate.power"
+    />
+
+    <button type="submit" class="btn btn-primary">{{characterToUpdate.name ? "Finish Update" : 'Add'}}</button>
+</form>

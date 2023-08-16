@@ -1,0 +1,11 @@
+<h1>Dragon ball Z</h1>
+<hr>
+<div class="d-flex flex-column flex-lg-row row-gap-5 row-gap-lg-0 column-gap-lg-5">
+    <div class="col">
+        <app-dbz-characters (onUpdate)="getCharacterDataToUpdate($event)"></app-dbz-characters>
+    </div>
+
+    <div class="col">
+        <app-dbz-add-character [characterToUpdate]="toUpdate" ></app-dbz-add-character>
+    </div>
+</div>

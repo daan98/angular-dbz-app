@@ -1,0 +1,19 @@
+<h1>Hero: {{ name }}</h1>
+
+<dl>
+    <td>Nombre: </td>
+    <dd>{{name}}</dd>
+    
+    <td>Edad: </td>
+    <dd>{{ age }}</dd>
+    
+    <td>Función: </td>
+    <dd>{{ getNameAge() }}</dd>
+    
+    <td>Capitalizado</td>
+    <dd>{{ capitalizeName }}</dd>
+</dl>
+
+<button (click)="onChangeNameClicked()">Cambiar héroe</button>
+
+<button (click)="onChangeAgeClicked()">Cambiar edad</button>
