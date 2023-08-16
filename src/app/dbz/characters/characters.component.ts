@@ -23,7 +23,6 @@ export class CharactersComponent {
 
   public onUpdateCharacter(id : string) : void {
     const characterToUpdate : Character = this.dbzService.getCharacterToUpdateById(id);
-    console.log('onUpdateCharacter characters: ', characterToUpdate);
     this.onUpdate.emit(characterToUpdate);
   }
 }

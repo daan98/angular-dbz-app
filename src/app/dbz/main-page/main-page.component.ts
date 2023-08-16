@@ -18,7 +18,6 @@ export class MainPageComponent {
   constructor() { }
 
   public getCharacterDataToUpdate(data : Character) : void {
-    console.log('getCharacterDataToUpdate data: ', data);
     this.toUpdate = data;
   }
 

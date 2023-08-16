@@ -51,10 +51,7 @@ export class DbzService {
   }
 
   public updateCharacterList(data : Character) {
-    console.log('updateCharacterList: ', data);
     const foundIndex : number = this.characters.findIndex(character => character.id === data.id);
-    
-    console.log('this.characters[foundIndex]: ', this.characters[foundIndex]);
     this.characters[foundIndex] = data;
   }
 }

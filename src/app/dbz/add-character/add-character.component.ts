@@ -46,9 +46,6 @@ export class AddCharacterComponent {
   }
 
   public onUpdateCharacter(data : Character) {
-    console.log('onUpdateCharacter to Update: ', this.characterToUpdate);
-    console.log('onUpdateCharacter DATA: ', data);
-    console.log('onUpdateCharacter to ne info: ', this.newCharacterInfo);
     if(this.characterToUpdate.name.trim().length === 0) {
       return;
     }
